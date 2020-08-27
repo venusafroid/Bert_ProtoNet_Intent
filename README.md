@@ -31,4 +31,4 @@ In my setting, all the utterances are divided into batches as query set. In each
     bash run.sh
        
 ## Ackownledge: 
-Thanks for the original repository arijitx/Fewshot-Learning-with-BERT
+Thanks for the original repository [arijitx/Fewshot-Learning-with-BERT](https://github.com/arijitx/Fewshot-Learning-with-BERT)
