@@ -29,4 +29,7 @@ In my setting, all the utterances are divided into batches as query set. In each
 ### Step 2: Train the model
  
     bash run.sh
-        
+       
+## Ackownledge: 
+
+Thanks for the original repository arijitx/Fewshot-Learning-with-BERT
