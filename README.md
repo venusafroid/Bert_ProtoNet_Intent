@@ -2,9 +2,7 @@
 This is the method performs the best in the previous experiments of cross-domain intent detection, which attempts to do few shot learning with BERT and prototypical network. This is the small paper describing and detailing the approach [paper](https://github.com/arijitx/Fewshot-Learning-with-BERT/raw/master/FEW_SHOT_INTENT_CLASSIFICATION_BERT.pdf). 
 
 Note: I have changed the way of training and testing:
-
 In the original setting, one support utterance and one query utterance for each intent are sampled randomly every step. 
-
 In my setting, all the utterances are divided into batches as query set. In each batch, each intent sample one utterance randomly as support set.
 
 ## Dependencies
