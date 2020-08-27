@@ -29,11 +29,9 @@ def convert_examples_to_features(examples, seq_length, tokenizer):
 	features = []
 	for (ex_index, example) in enumerate(examples):
 		tokens_a = tokenizer.tokenize(example.text_a)
-
 		tokens_b = None
 		if example.text_b:
 			tokens_b = tokenizer.tokenize(example.text_b)
-
 		if tokens_b:
 			_truncate_seq_pair(tokens_a, tokens_b, seq_length - 3)
 		else:
@@ -58,7 +56,6 @@ def convert_examples_to_features(examples, seq_length, tokenizer):
 			input_type_ids.append(1)
 
 		input_ids = tokenizer.convert_tokens_to_ids(tokens)
-
 		input_mask = [1] * len(input_ids)
 		
 		while len(input_ids) < seq_length:
@@ -154,12 +151,10 @@ class IntentDset():
 
 		self.n_labels = len(self.label2id)
 
-
+	# original way of training or testing
 	def next_batch(self):
 		sup_set = random.sample(range(0,self.n_labels),self.n_labels)
-
 		batch = {"sup_set_x":[], "sup_set_y":[], "target_x": [], "target_y": []}
-
 		for n,s in enumerate(sup_set):
 			idx = random.sample(range(0, len(self.label_bins[s])),self.Ni+self.n_query)
 
@@ -189,6 +184,7 @@ class IntentDset():
 
 		return batch, self.n_labels
     
+	# changed way of training or testing
 	def next_batch_test_full(self):
 		sup_set = [i for i in range(0,self.n_labels)]
 		batch = {"sup_set_x":[], "sup_set_y":[], "target_x": [], "target_y": []}
