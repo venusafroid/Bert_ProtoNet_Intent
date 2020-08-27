@@ -5,7 +5,15 @@ I have changed the way of training and testing:
 In the original setting, one support utterance and one query utterance for each intent are sampled randomly every step. 
 In my setting, all the utterances are divided into batches as query set. In each batch, each intent sample one utterance randomly as support set.
 
-## Directory Structure:
+## Dependencies
+
+    * pytorch == 3.6.5
+    * torch == 1.0.0
+    * re == 2.2.1
+    * pytorch_pretrained_bert == 0.6.2
+    * numpy == 1.15.4
+    
+## Directory Structure
 
     ./data: preprocessed data of Lena and Moli
     data.py: read data
@@ -13,14 +21,14 @@ In my setting, all the utterances are divided into batches as query set. In each
     train.py: train and test procedure
     run.sh: start to train
 
-## Data Schema:
+## Data Schema
 
     ./data/lena/seq.in  -> 'utterance\n'
     ./data/lena/label   -> 'label\n'
     ./data/moli/seq.in  -> 'utterance\n'
     ./data/moli/label   -> 'label\n'
 
-## Quickstart:
+## Quickstart
 ### Step 1: Download and unzip the pretrained BERT model
    
     1. download the BERT model and the corresponding vocab file to the root path
@@ -33,5 +41,5 @@ In my setting, all the utterances are divided into batches as query set. In each
     bash run.sh
     
        
-## Ackownledge: 
+## Ackownledge
 Thanks for the original repository [arijitx/Fewshot-Learning-with-BERT](https://github.com/arijitx/Fewshot-Learning-with-BERT)
