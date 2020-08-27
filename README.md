@@ -7,11 +7,11 @@ In my setting, all the utterances are divided into batches as query set. In each
 
 ## Directory Structure:
 
-    ./data: lena&moli data
+    ./data: preprocessed data of Lena and Moli
     data.py: read data
-    model.py: the model
+    model.py: the Bert_ProtoNet model
     train.py: train and test procedure
-    run.sh: start to train and test
+    run.sh: start to train
 
 ## Data Schema:
 
@@ -29,7 +29,9 @@ In my setting, all the utterances are divided into batches as query set. In each
     
 ### Step 2: Train the model
  
+    // if you want to change the data to transfer, please reedit 'train_data' and 'dev_data' in run.sh
     bash run.sh
+    
        
 ## Ackownledge: 
 Thanks for the original repository [arijitx/Fewshot-Learning-with-BERT](https://github.com/arijitx/Fewshot-Learning-with-BERT)
