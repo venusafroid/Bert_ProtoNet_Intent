@@ -10,7 +10,8 @@ In my setting, all the utterances are divided into batches as query set. In each
     ./data: lena&moli data
     data.py: read data
     model.py: the model
-    train.py: train and test model
+    train.py: train and test procedure
+    run.sh: start to train and test
 
 ## Data Schema:
 
