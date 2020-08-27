@@ -7,11 +7,11 @@ In my setting, all the utterances are divided into batches as query set. In each
 
 ## Dependencies
 
- * pytorch == 3.6.5
- * torch == 1.0.0
- * re == 2.2.1
- * pytorch_pretrained_bert == 0.6.2
- * numpy == 1.15.4
+    * pytorch == 3.6.5
+    * torch == 1.0.0
+    * re == 2.2.1
+    * pytorch_pretrained_bert == 0.6.2
+    * numpy == 1.15.4
     
 ## Directory Structure
 
